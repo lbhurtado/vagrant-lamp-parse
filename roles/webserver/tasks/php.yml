@@ -1,0 +1,12 @@
+---
+- name: add ppa repository
+  apt_repository: repo=ppa:ondrej/php5-oldstable
+
+- name: install php5
+  apt: name=php5 update_cache=yes state=latest
+
+- name: install php5-mysql
+  apt: name=php5-mysql update_cache=yes state=latest
+
+- name: install php5-curl
+  apt: name=php5-curl update_cache=yes state=latest
